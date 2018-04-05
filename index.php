@@ -3,6 +3,7 @@ $apal=100;
 $botak= 0;
 $hp= 200;
 $load= 10;
+$two= 2;
 
 
 
@@ -21,19 +22,26 @@ for ($index=0; $index < 5; $index++) {
 
 
   ?></br><?php
-  $bot = $botak / 10;
-   for ($index2=0; $index2 < $bot ; $index2++) {
-    echo "&bullet;";
-}
-echo $botak;
-?> teď je v botaku</br><?php
 
-$apa = $apal / 10;
- for ($index3=0; $index3 < $apa ; $index3++) {
-  echo "&bullet;";
-}
+  echo $botak;
+  ?> teď je v botaku</br><?php
+  $bot = $botak * 2;
+  ?>
+  <div style="display: block; height: 10px; width: 202px; border:solid black 1px;">
+    <div style="display: block; height: 10px; width: <?php echo $bot?>px; background-color: green;">
+    </div>
+  </div>
+  <?php
+
   echo $apal;
   ?> teď je v apalu</br><?php
+  $apa = $apal * 2;
+  ?>
+  <div style="display: block; height: 10px; width: 202px; border:solid black 1px;">
+    <div style="display: block; height: 10px; width: <?php echo $apa?>px; background-color: blue;">
+    </div>
+  </div>
+  <?php
 
   echo $hp;
   ?>  loď má hp</br><?php
@@ -43,6 +51,7 @@ $apa = $apal / 10;
     </div>
   </div>
   <?php
-  ?></br><?php
+  ?></br><hr /><?php
+
 }
 ?>
