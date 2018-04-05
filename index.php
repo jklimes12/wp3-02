@@ -7,25 +7,42 @@ $load= 10;
 
 
 while ($botak != 100) {
-  $apal= $apal - $load;
+  $apal -= $load;
 
 for ($index=0; $index < 5; $index++) {
   $alfaDmg= rand(0,8);
-  $hp = $hp - $alfaDmg;
+  $hp -= $alfaDmg;
   if ($hp <= 0) {die("loď UMŘELA");
   }
   echo $alfaDmg;
   ?> pirát ubral</br><?php
   }
+  $botak+= $load;
 
-  $botak= $botak + $load;
+
   ?></br><?php
-  echo $botak;
-  ?> teď je v botaku</br><?php
+  $bot = $botak / 10;
+   for ($index2=0; $index2 < $bot ; $index2++) {
+    echo "&bullet;";
+}
+echo $botak;
+?> teď je v botaku</br><?php
+
+$apa = $apal / 10;
+ for ($index3=0; $index3 < $apa ; $index3++) {
+  echo "&bullet;";
+}
   echo $apal;
   ?> teď je v apalu</br><?php
+
   echo $hp;
-  ?> hp lodi</br><?php
+  ?>  loď má hp</br><?php
+  ?>
+  <div style="display: block; height: 10px; width: 202px; border:solid black 1px;">
+    <div style="display: block; height: 10px; width: <?php echo $hp ?>px; background-color: red;">
+    </div>
+  </div>
+  <?php
   ?></br><?php
 }
 ?>
